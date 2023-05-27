@@ -1,8 +1,8 @@
 <br />
 <div align="center">
+    <h3 align="center">A Cool Playground</h3>
    <img src="img/percapita.jpg" alt="Logo" width="450" height="330">
   <p>Foto retirada de: https://unsplash.com/pt-br/fotografias/Zk5Kf3nVjQQ</p>
-  <h3 align="center">A Cool Playground</h3>
 
   <p align="center">
     Um aplicativo para calcular a sua renda per capita! </br>
