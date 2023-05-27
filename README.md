@@ -1,6 +1,6 @@
 <br />
 <div align="center">
-   <img src="img/percapita.jpg" alt="Logo" width="550" height="430">
+   <img src="img/percapita.jpg" alt="Logo" width="450" height="330">
   <p>Foto retirada de: https://unsplash.com/pt-br/fotografias/Zk5Kf3nVjQQ</p>
   <h3 align="center">A Cool Playground</h3>
 
@@ -18,7 +18,7 @@ Este projeto é feito como desafio para o cargo de estagiário na empresa [Kukac
 
 ## 🔨 Construído com ?
 
-O aplicativo é construido utilizando typescript com os frameworks node.js e react
+O aplicativo é construido utilizando typescript com os frameworks node.js e react.
 
 ![Tecnologias](https://skillicons.dev/icons?i=typescript,nodejs,react)
 
