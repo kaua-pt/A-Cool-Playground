@@ -1,6 +1,7 @@
 <br />
 <div align="center">
-
+   <img src="img/percapita.jpg" alt="Logo" width="550" height="430">
+  <p>Foto retirada de: https://unsplash.com/pt-br/fotografias/Zk5Kf3nVjQQ</p>
   <h3 align="center">A Cool Playground</h3>
 
   <p align="center">
