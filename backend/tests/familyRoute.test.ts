@@ -25,4 +25,29 @@ describe("Describe the API routes",()=>{
         expect(response.statusCode).toBe(200);
         expect(response.body.name).toBe("Uninformed");
     })
+    it("Should return the adress as UNKNOWN because the inputed cep doesnt exists",async()=>{
+        const body = {
+            "cep":999,
+            "income":1500,
+            "dependents":2
+        }
+        const response = await req(server).get("/api/").send(body);
+        expect(response.statusCode).toBe(200);
+        expect(response.body.adress.complement).toBe("UNKNOWN");
+        expect(response.body.adress.cep).toBe("UNKNOWN");
+        expect(response.body.adress. neighborhood).toBe("UNKNOWN");
+    })
+
+    it("Should return the adress as UNKNOWN because the inputed cep doesnt exists in API",async()=>{
+        const body = {
+            "cep":99999999,
+            "income":1500,
+            "dependents":2
+        }
+        const response = await req(server).get("/api/").send(body);
+        expect(response.statusCode).toBe(200);
+        expect(response.body.adress.complement).toBe("UNKNOWN");
+        expect(response.body.adress.cep).toBe("UNKNOWN");
+        expect(response.body.adress.neighborhood).toBe("UNKNOWN");
+    })
 })

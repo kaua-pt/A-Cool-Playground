@@ -1,11 +1,23 @@
 import fetch from 'node-fetch';
+import HttpError from "http-errors";
 import Utils from '../utils/consts';
 
 // function that fetches the cep
-const getAdress = async (cep:string) => {
+const getAdress:any = async (cep:string) => {
+
     const finalUrl:string = `${Utils.APIURL}${cep}/json/`;
-    const result = await fetch(finalUrl);
-    return result.json();
+
+    try{
+        const returned = await fetch(finalUrl);
+        const product = await returned.json();
+
+        if(product.erro === true)
+            throw new HttpError.NotFound();
+        return product;
+
+    }catch(err){
+        return Utils.NULLADRESS;
+    }
 }
 
 export default getAdress;
