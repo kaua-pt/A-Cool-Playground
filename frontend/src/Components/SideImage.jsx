@@ -21,8 +21,8 @@ const Wrapper =styled.div`
     margin-bottom: 15px;
 
     img {
-        width: 95%;
-        height: 95%;
+        width: 93%;
+        height: 93%;
         border-radius: 20px;
     }
 `

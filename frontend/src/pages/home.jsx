@@ -18,5 +18,6 @@ const Container = styled.div`
     height: 98vh;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     background: #F3F7F8;
 `
