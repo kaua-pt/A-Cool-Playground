@@ -20,7 +20,7 @@ Este projeto é feito como desafio para o cargo de estagiário na empresa [Kukac
 
 O aplicativo é construido utilizando typescript com os frameworks node.js e react.
 
-![Tecnologias](https://skillicons.dev/icons?i=typescript,nodejs,react)
+![Tecnologias](https://skillicons.dev/icons?i=typescript,nodejs,react,javascript)
 
 ## 🏎️ Como rodar ?
  
