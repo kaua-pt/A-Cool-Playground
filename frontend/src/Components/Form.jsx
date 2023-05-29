@@ -77,6 +77,7 @@ const Button = styled.button`
 
 const Title = styled.span`
     height:3%;
+    font-weight: bold;
     width:90%;
     background-color:#8dc0bc;
     font-size: 30px;

@@ -76,6 +76,7 @@ const Title = styled.span`
     font-size: 30px;
     border-radius:20px;
     margin: 10px;
+    font-weight: bold;
     text-align: center;
 `
 const Info = styled.p`
