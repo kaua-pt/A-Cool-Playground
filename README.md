@@ -6,8 +6,8 @@
 
   <p align="center">
     Um aplicativo para calcular a sua renda per capita! </br>
-    "Use sua cabeça, não apenas o espírito. Pense, pense, pense." (Kamado,tanjiro)
-    🚧 Em construção 🚧
+    "Use sua cabeça, não apenas o espírito. Pense, pense, pense." (Kamado,tanjiro) <\br>
+    ✔️ Concluído ✔️
   </p>
 </div>
 
