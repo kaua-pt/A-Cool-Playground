@@ -7,20 +7,25 @@ export const PlaygroundContext = createContext({});
 export const PlaygroundProvider = ({children}) =>{
     const [infoList,setInfoList] = useState([]);
 
+    const [family,setFamily] = useState({
+        cep:"",
+        income:0,
+        dependents:0
+    });
+
     const getInfo = (info,e) =>{
         e.preventDefault();
 
-        axios.get(`${APIURL}`, {headers:{	
-        "name":info.name,
-        "cep":info.cep,
-        "income":info.income,
-        "dependents":info.dependents}})
-        .then((answer)=>{ setInfoList(answer);})
+        console.log(info);
+
+        axios.post(`${APIURL}`,family)
+        .then((answer)=>{ 
+        setInfoList(answer.data);})
         .catch((e)=>{console.log(e)});
     }
 
     return( 
-        <PlaygroundContext.Provider value={{getInfo,infoList,setInfoList}}>
+        <PlaygroundContext.Provider value={{getInfo,infoList,setInfoList,family,setFamily}}>
             {children}
         </PlaygroundContext.Provider>
         )

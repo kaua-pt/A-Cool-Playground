@@ -3,6 +3,6 @@ import getUserInfo from "../controllers/familyController";
 
 const routes = Router();
 
-routes.get('/', getUserInfo);
+routes.post('/', getUserInfo);
 
 export default routes;

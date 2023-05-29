@@ -6,9 +6,9 @@ import Result from '../Components/Result';
 export default function Home(){
     return(
         <Container>
+            <SideImage></SideImage>
             <Form></Form>
             <Result></Result>
-            <SideImage></SideImage>
         </Container>
     )
 }

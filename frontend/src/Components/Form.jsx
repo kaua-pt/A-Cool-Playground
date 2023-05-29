@@ -1,23 +1,30 @@
 import styled from 'styled-components';
+import { useContext} from 'react';
+import { PlaygroundContext } from '../Contexts';
 
 export default function Form(){
-    return(<>
+    const { family,setFamily,getInfo } = useContext(PlaygroundContext);
+
+    function onSubmit(e){
+        getInfo(family,e);
+    }
+    return(
     <FormContainer>
-        <FormI>
-            <span>Insira seus dados:</span>
-            <input name ="name" id ="name" type='text' ></input>
-            <input name ="cep" id ="cep" type='number' required></input>
-            <input name ="income" id ="income" type='number' required></input>
-            <input name ="persons" id ="persons" type='number' required></input>
-            <button type='submit'></button>
+        <FormI onSubmit={onSubmit}>
+            <Title>Enter your data</Title>
+            <Input name ="name" id ="name" type='text' placeholder='Your Name' onChange = {(e) => setFamily({...family, name: e.target.value})} ></Input>
+            <Input name ="cep" id ="cep" type='number' placeholder='Your CEP' onChange = {(e) => setFamily({...family, cep: e.target.value})} required></Input>
+            <Input name ="income" id ="income" type='number' placeholder='Your Income' onChange = {(e) => setFamily({...family, income: e.target.value})} required></Input>
+            <Input name ="dependents" id ="dependents" type='number' placeholder='Number of dependents' onChange = {(e) => setFamily({...family, dependents: e.target.value})} required></Input>
+            <Button type='submit'>Submit</Button>
         </FormI>
     </FormContainer>
 
-    </>)
+    )
 }
 
 const FormContainer = styled.div`
-    background: #8496A2;
+    background: #2A9EB8;
     border-radius: 20px;
     display:flex;
     align-items: center;
@@ -40,3 +47,43 @@ const FormI = styled.form`
     align-items: center;
 `
 
+const Input = styled.input`
+    background: #edefe7;
+    width: 90%;
+    height: 3%;
+    border-radius: 20px;
+    margin: 10px;
+    border:none;
+    outline:none;
+    font-size: 20px;
+    padding: 20px;
+
+`
+
+const Button = styled.button`
+    width: 50%;
+    background-color: #D4D7C4;
+    font-size:14px;
+    font-weight:700;
+    text-transform: uppercase;
+    border:none;
+    padding:10px;
+    cursor: pointer;
+    display:inline-block;
+    text-decoration: none;
+    border-radius:20px;
+    margin: 10px;
+`
+
+const Title = styled.span`
+    height:3%;
+    width:90%;
+    background-color:#8dc0bc;
+    font-size: 30px;
+    border-radius:20px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 130px;
+    margin-bottom: 20px;
+`
